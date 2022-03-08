@@ -4,7 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function DetailsScreen({navigation}) {
+function Details({navigation}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Details Screen</Text>
@@ -12,4 +12,4 @@ function DetailsScreen({navigation}) {
     </View>
   );
 }
-export default DetailsScreen;
+export default Details;

@@ -4,7 +4,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function HomeScreen({navigation}) {
+function Home({navigation}) {
     const [count, setCount] = React.useState(0);
     React.useLayoutEffect(() => {
     navigation.setOptions({
@@ -20,4 +20,4 @@ function HomeScreen({navigation}) {
       <Button title='Go to details' onPress={() => navigation.navigate('Details')}> </Button>
     </View>  
     )}
-export default HomeScreen
+export default Home;
