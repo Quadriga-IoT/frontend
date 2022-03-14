@@ -7,6 +7,7 @@ import Pil from './screens/Pil'
 import Bitki from './screens/Bitki'
 import Hız from './screens/Hız'
 import Konum from './screens/Konum'
+import Konum from './screens/Hakkımızda'
 //import Icon from "react-native-vector-icons/FontAwesome5";   
 //ikisini aynı anda eklemek istersek?
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -72,6 +73,15 @@ function App() {
          }} />
 
         <Drawer.Screen name="Konum" component={Konum} options={{ title: 'Konum' 
+        // ,
+        // drawerIcon: ({focused, size}) => (
+        //   <Icon
+        //      name="map-marker-radius"
+        //      size={size}
+        //      color={focused ? '#7cc' : '#ccc'}
+        //   />)
+         }} />
+        <Drawer.Screen name="Hakkımızda" component={Hakkımızda} options={{ title: 'Hakkımızda' 
         // ,
         // drawerIcon: ({focused, size}) => (
         //   <Icon
