@@ -35,7 +35,7 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Ev"
+                            label="Ana sayfa"
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
                         <DrawerItem style = { styles.draweritem}
@@ -86,27 +86,26 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                                 <Icon 
                                 name="information-outline" 
-                                color= {color}
+                                color= {"#000000"}
                                 size={size}
                                 />
                             )}
                             label="Hakkımızda"
                             onPress={() => {props.navigation.navigate('Hakkımızda')}}
                         />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="history" 
+                                color= {"#EDB74B"}
+                                size={size}
+                                />
+                            )}
+                            label="Geçmiş Veriler"
+                            onPress={() => {props.navigation.navigate('Geçmiş Veriler')}}
+                        />
                     </Drawer.Section>
 
-            <Drawer.Section style={styles.bottomDrawerSection}>
-                <DrawerItem 
-                    icon={({color, size}) => (
-                        <Icon 
-                        name="exit-to-app" 
-                        color={"#000000"}
-                        size={size}
-                        />
-                    )}
-                    label="Sign Out"
-                />
-            </Drawer.Section>
         </View>
     );
 }
@@ -114,12 +113,6 @@ export function DrawerContent(props) {
 const styles = StyleSheet.create({
     drawerContent: {
       flex: 1,
-    },
-    bottomDrawerSection: {
-        backgroundColor: "#DEEFF8",
-        marginTop: 240,
-        borderTopColor: '#f4f4f4',
-        borderTopWidth: 3
     },
     drawerSection: {
       backgroundColor: "#F3F3F3",

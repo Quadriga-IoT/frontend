@@ -8,6 +8,7 @@ import Bitki from './screens/Bitki'
 import Hız from './screens/Hız'
 import Konum from './screens/Konum'
 import Hakkımızda from './screens/Hakkımızda'
+import GeçmişVeriler from './screens/GeçmişVeriler'
 //import Icon from "react-native-vector-icons/FontAwesome5";   
 //ikisini aynı anda eklemek istersek?
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -20,19 +21,19 @@ function App() {
   return (
     <NavigationContainer>
       <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />} >
-        <Drawer.Screen name="Home" component={Home} options={{ title: 'Ev' ,
-         headerRight: () => ( 
-          <Button
-            title="Sign in"
-            icon={({color, size}) => (
-              <Icon 
-              name="login" 
-              color={color}
-              size={size}
-              />
-             )}                                  
-             //icon hata vermemesine rağmen butonun içine icon eklemedi.
-          />)   
+        <Drawer.Screen name="Home" component={Home} options={{ title: 'Ana Sayfa'
+        //  headerRight: () => ( 
+        //   <Button
+        //     title="Sign in"
+        //     icon={({color, size}) => (
+        //       <Icon 
+        //       name="login" 
+        //       color={color}
+        //       size={size}
+        //       />
+        //      )}                                  
+        //      //icon hata vermemesine rağmen butonun içine icon eklemedi.
+        //   />)   
         //   , 
         //   drawerIcon: ({focused, size}) => (
         //     <Icon
@@ -89,6 +90,8 @@ function App() {
         //      size={size}
         //      color={focused ? '#7cc' : '#ccc'}
         //   />)
+         }} />
+         <Drawer.Screen name="GeçmişVeriler" component={GeçmişVeriler} options={{ title: 'Geçmiş Veriler' 
          }} />
       </Drawer.Navigator>
     </NavigationContainer>
