@@ -82,6 +82,17 @@ export function DrawerContent(props) {
                             label="Konum"
                             onPress={() => {props.navigation.navigate('Konum')}}
                         />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="information-outline" 
+                                color= {color}
+                                size={size}
+                                />
+                            )}
+                            label="Hakkımızda"
+                            onPress={() => {props.navigation.navigate('Hakkımızda')}}
+                        />
                     </Drawer.Section>
 
             <Drawer.Section style={styles.bottomDrawerSection}>
@@ -106,7 +117,7 @@ const styles = StyleSheet.create({
     },
     bottomDrawerSection: {
         backgroundColor: "#DEEFF8",
-        marginTop: 300,
+        marginTop: 240,
         borderTopColor: '#f4f4f4',
         borderTopWidth: 3
     },

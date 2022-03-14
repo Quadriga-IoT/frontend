@@ -7,7 +7,7 @@ import Pil from './screens/Pil'
 import Bitki from './screens/Bitki'
 import Hız from './screens/Hız'
 import Konum from './screens/Konum'
-import Konum from './screens/Hakkımızda'
+import Hakkımızda from './screens/Hakkımızda'
 //import Icon from "react-native-vector-icons/FontAwesome5";   
 //ikisini aynı anda eklemek istersek?
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
