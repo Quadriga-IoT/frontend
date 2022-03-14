@@ -1,23 +1,17 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { View, Text,Image, TouchableOpacity} from 'react-native';
+import image from '../../assets/home.png';
+import Icon from "react-native-vector-icons/FontAwesome5";
 
-function Home({navigation}) {
-    const [count, setCount] = React.useState(0);
-    React.useLayoutEffect(() => {
-    navigation.setOptions({
-      headerRight: () => (
-        <Button onPress={() => setCount(c => c + 1)} title="Update count" />
-      ),
-    });
-  }, [navigation]);
+function Home() {
     return(
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
-      <Text>Count: {count}</Text>
-      <Button title='Go to details' onPress={() => navigation.navigate('Details')}> </Button>
-    </View>  
+      <Image class ="img-fluid" source = {image} style ={{  height: 200 , width: 200 }}  />
+      {/* <TouchableOpacity>
+         <Icon name={"linkedin"} color={"#0077B5"} size={30}  style = { {marginTop: 200}} />
+      </TouchableOpacity>   */}
+      </View>  
     )}
 export default Home;
+

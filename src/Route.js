@@ -1,80 +1,90 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import {Button } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './screens/Home'
-import Details from './screens/Details'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Pil from './screens/Pil'
+import Bitki from './screens/Bitki'
+import Hız from './screens/Hız'
+import Konum from './screens/Konum'
+//import Icon from "react-native-vector-icons/FontAwesome5";   
+//ikisini aynı anda eklemek istersek?
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { DrawerContent } from './screens/DrawerContent';
 
 
-const Tab = createBottomTabNavigator();
-
-// function MyTabs() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen name="Home" component={Home} />
-//       <Tab.Screen name="Settings" component={Details} />
-//     </Tab.Navigator>
-//   );
-// }
+const Drawer = createDrawerNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Details" component={Details} />
-       </Tab.Navigator>
-     </NavigationContainer>
+      <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />} >
+        <Drawer.Screen name="Home" component={Home} options={{ title: 'Ev' ,
+         headerRight: () => ( 
+          <Button
+            title="Sign in"
+            icon={({color, size}) => (
+              <Icon 
+              name="login" 
+              color={color}
+              size={size}
+              />
+             )}                                  
+             //icon hata vermemesine rağmen butonun içine icon eklemedi.
+          />)   
+        //   , 
+        //   drawerIcon: ({focused, size}) => (
+        //     <Icon
+        //        name="home-outline"
+        //        size={size}
+        //        color={focused ? '#7cc' : '#ccc'}
+        //     />
+        //  )
+         }}/>
+        <Drawer.Screen name="Pil" component={Pil} options={{ title: 'Pil'
+        //  ,
+        // drawerIcon: ({focused, size}) => (
+        //   <Icon
+        //      name="battery-80"
+        //      size={size}
+        //      color={focused ? '#7cc' : '#ccc'}
+        //   />)
+         }} />
+
+        <Drawer.Screen name="Bitki" component={Bitki} options={{ title: 'Bitki' 
+        // ,
+        // drawerIcon: ({focused, size}) => (
+        //   <Icon
+        //      name="sprout"
+        //      size={size}
+        //      color={focused ? '#7cc' : '#ccc'}
+        //   />)
+         }} />
+
+        <Drawer.Screen name="Hız" component={Hız} options={{ title: 'Hız' 
+        // ,
+        // drawerIcon: ({focused, size}) => (
+        //   <Icon
+        //      name="speedometer"
+        //      size={size}
+        //      color={focused ? '#7cc' : '#ccc'}
+        //   />)
+         }} />
+
+        <Drawer.Screen name="Konum" component={Konum} options={{ title: 'Konum' 
+        // ,
+        // drawerIcon: ({focused, size}) => (
+        //   <Icon
+        //      name="map-marker-radius"
+        //      size={size}
+        //      color={focused ? '#7cc' : '#ccc'}
+        //   />)
+         }} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 }
 
-
-
-
-// function StackScreen() {
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen
-//         name="Home"
-//         component={HomeScreen}
-//         options={{
-//           headerTitle: props => <LogoTitle {...props} />,
-//           headerRight: () => (
-//             <Button
-//               onPress={() => alert('This is a button!')}
-//               title="Info"
-//               color="#fff"
-//             />
-//           ),
-//         }}
-//       />
-//     </Stack.Navigator>
-//   );
-// }
-// const Stack = createNativeStackNavigator();
-// const Drawer = createDrawerNavigator();
-
-// function App() {
-//   return (
-//     <NavigationContainer>
-//       <Stack.Navigator initialRouteName='Home'>
-//         <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Overview' }}/>
-//         <Stack.Screen name="Details" component={DetailsScreen} />
-//       </Stack.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-// function App() {
-//   return (
-//     <NavigationContainer>
-//       <Drawer.Navigator>
-//         <Drawer.Screen name="Home" component={HomeScreen} options={{ title: 'Home'}}/>
-//         <Drawer.Screen name="Details" component={DetailsScreen} />
-//       </Drawer.Navigator>
-//     </NavigationContainer>
-//   );
-// }
-
 export default App;
+
+
