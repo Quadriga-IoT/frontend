@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { View, Text,Image, TouchableOpacity, StyleSheet} from 'react-native';
-import hizgörseli from '../../assets/speed2.png';
+import hizgörseli from '../../assets/yenihiz1.png';
 import pilgörseli from '../../assets/battery3.jpg';
 import Icon from "react-native-vector-icons/FontAwesome5";
 
 function Home() {
     return(
-      <View style={{ flex: 1, alignItems: 'center'}}>
+      <View style={{ flex: 1, alignItems: 'center' , backgroundColor: "#F7F7F7"}}>
       <Text style =  {styles.Text}>Aracın Hızı</Text>
       <Image class ="img-fluid" source = {hizgörseli} style ={{  height: 200 , width: 200, marginBottom: 50,  }}  />
       <Text style =  {styles.Text} >Aracın Pil Durumu</Text>

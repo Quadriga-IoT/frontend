@@ -102,7 +102,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Geçmiş Veriler"
-                            onPress={() => {props.navigation.navigate('Geçmiş Veriler')}}
+                            onPress={() => {props.navigation.navigate('GeçmişVeriler')}}
                         />
                     </Drawer.Section>
 
