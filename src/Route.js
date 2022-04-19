@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './screens/Home'
 import Pil from './screens/Pil'
 import Bitki from './screens/Bitki'
-import Hız from './screens/Hız'
+import Hiz from './screens/Hiz'
 import Konum from './screens/Konum'
-import Hakkımızda from './screens/Hakkımızda'
-import GeçmişVeriler from './screens/GeçmişVeriler'
+import Hakkimizda from './screens/Hakkimizda'
+import YapilanGorev from './screens/YapilanGorev'
 //import Icon from "react-native-vector-icons/FontAwesome5";   
 //ikisini aynı anda eklemek istersek?
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -63,7 +63,7 @@ function App() {
         //   />)
          }} />
 
-        <Drawer.Screen name="Hız" component={Hız} options={{ title: 'Hız' 
+        <Drawer.Screen name="Hiz" component={Hiz} options={{ title: 'Hız' 
         // ,
         // drawerIcon: ({focused, size}) => (
         //   <Icon
@@ -82,7 +82,7 @@ function App() {
         //      color={focused ? '#7cc' : '#ccc'}
         //   />)
          }} />
-        <Drawer.Screen name="Hakkımızda" component={Hakkımızda} options={{ title: 'Hakkımızda' 
+        <Drawer.Screen name="Hakkimizda" component={Hakkimizda} options={{ title: 'Hakkımızda' 
         // ,
         // drawerIcon: ({focused, size}) => (
         //   <Icon
@@ -91,7 +91,7 @@ function App() {
         //      color={focused ? '#7cc' : '#ccc'}
         //   />)
          }} />
-         <Drawer.Screen name="GeçmişVeriler" component={GeçmişVeriler} options={{ title: 'Geçmiş Veriler' 
+         <Drawer.Screen name="YapilanGorev" component={YapilanGorev} options={{ title: 'YapilanGorev' 
          }} />
       </Drawer.Navigator>
     </NavigationContainer>

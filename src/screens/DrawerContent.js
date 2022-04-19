@@ -52,24 +52,13 @@ export function DrawerContent(props) {
                         <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
-                                name="sprout" 
-                                color={"#41805D"}
-                                size={size}
-                                />
-                            )}
-                            label="Bitki"
-                            onPress={() => {props.navigation.navigate('Bitki')}}
-                        />
-                        <DrawerItem style = { styles.draweritem}
-                            icon={({color, size}) => (
-                                <Icon 
                                 name="speedometer" 
                                 color={"#000000"}
                                 size={size}
                                 />
                             )}
                             label="Hız"
-                            onPress={() => {props.navigation.navigate('Hız')}}
+                            onPress={() => {props.navigation.navigate('Hiz')}}
                         />
                         <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
@@ -82,6 +71,29 @@ export function DrawerContent(props) {
                             label="Konum"
                             onPress={() => {props.navigation.navigate('Konum')}}
                         />
+                        
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="format-list-checks" 
+                                color= {"#EDB74B"}
+                                size={size}
+                                />
+                            )}
+                            label="Yapılan Görev"
+                            onPress={() => {props.navigation.navigate('YapilanGorev')}}
+                        />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="sprout" 
+                                color={"#41805D"}
+                                size={size}
+                                />
+                            )}
+                            label="Bitki"
+                            onPress={() => {props.navigation.navigate('Bitki')}}
+                        />
                         <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
@@ -91,18 +103,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Hakkımızda"
-                            onPress={() => {props.navigation.navigate('Hakkımızda')}}
-                        />
-                        <DrawerItem style = { styles.draweritem}
-                            icon={({color, size}) => (
-                                <Icon 
-                                name="history" 
-                                color= {"#EDB74B"}
-                                size={size}
-                                />
-                            )}
-                            label="Geçmiş Veriler"
-                            onPress={() => {props.navigation.navigate('GeçmişVeriler')}}
+                            onPress={() => {props.navigation.navigate('Hakkimizda')}}
                         />
                     </Drawer.Section>
 
