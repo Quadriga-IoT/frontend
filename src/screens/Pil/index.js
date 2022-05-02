@@ -1,12 +1,30 @@
-import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import React ,{useState , useEffect} from 'react';
+import { ScrollView, View, Text, Button } from 'react-native';
+import axios from 'axios';
+import * as Progress from 'react-native-progress';
 
 
-function Details() {
+
+function Pil() 
+{
+  const [pil, setpil] = useState([]);
+  useEffect(() => 
+      {
+        axios.get("https://jsonplaceholder.typicode.com/posts")
+        .then(response => setpil(response.data))
+        .catch(error => console.log({error}));
+      }, []);
+      
+      var dizi = pil.map(pil => { return <View style = {{ marginBottom: 20}} key = {pil.id} > 
+        <Progress.Bar style = {{ marginBottom: 10}} size={100} progress={pil.id/100} width={200} />
+        <Progress.Circle size={100}  progress={pil.id/100}  />
+        </View>} )
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Pil</Text>
-    </View>
+    <ScrollView  >
+      {dizi}
+      {dizi[0]}
+
+    </ScrollView>
   );
 }
-export default Details;
+export default Pil;

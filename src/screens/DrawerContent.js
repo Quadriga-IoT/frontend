@@ -105,6 +105,39 @@ export function DrawerContent(props) {
                             label="Hakkımızda"
                             onPress={() => {props.navigation.navigate('Hakkimizda')}}
                         />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="information-outline" 
+                                color= {"#000000"}
+                                size={size}
+                                />
+                            )}
+                            label="Episodes"
+                            onPress={() => {props.navigation.navigate('Episodes')}}
+                        />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="information-outline" 
+                                color= {"#000000"}
+                                size={size}
+                                />
+                            )}
+                            label="Udemy"
+                            onPress={() => {props.navigation.navigate('Udemy')}}
+                        />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="information-outline" 
+                                color= {"#000000"}
+                                size={size}
+                                />
+                            )}
+                            label="KucukbirDeneme"
+                            onPress={() => {props.navigation.navigate('KucukbirDeneme')}}
+                        />
                     </Drawer.Section>
 
         </View>

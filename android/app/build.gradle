@@ -84,10 +84,12 @@ project.ext.react = [
 
 apply from: "../../node_modules/react-native/react.gradle"
 
-project.ext.vectoricons = [
-    iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' , 'FontAwesome.ttf'] // Name of the font files you want to copy
-]
-apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+//ben sildim
+// project.ext.vectoricons = [
+//     iconFontNames: [ 'MaterialIcons.ttf', 'EvilIcons.ttf' , 'FontAwesome.ttf'] // Name of the font files you want to copy
+// ]
+// apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+//ben sildim
 
 /**
  * Set this to true to create two separate APKs instead of one:
