@@ -9,9 +9,9 @@ import Hiz from './screens/Hiz'
 import Konum from './screens/Konum'
 import Hakkimizda from './screens/Hakkimizda'
 import YapilanGorev from './screens/YapilanGorev'
-import Episodes from './screens/Episodes'
+import Grafik from './screens/Grafik'
 import Udemy from './screens/Udemy'
-import KucukbirDeneme from './screens/KucukbirDeneme'
+import Vericekmeornekleri from './screens/Vericekmeornekleri'
 
 //import Icon from "react-native-vector-icons/FontAwesome5";   
 //ikisini aynı anda eklemek istersek?
@@ -97,12 +97,12 @@ function App() {
          }} />
          <Drawer.Screen name="YapilanGorev" component={YapilanGorev} options={{ title: 'YapilanGorev' 
          }} />
-         <Drawer.Screen name="Episodes" component={Episodes} options={{ title: 'Episodes' 
+         <Drawer.Screen name="Grafik" component={Grafik} options={{ title: 'Grafik' 
          }} />
          <Drawer.Screen name="Udemy" component={Udemy} options={{ title: 'Udemy' 
          }} />
-         <Drawer.Screen name="KucukbirDeneme" component={KucukbirDeneme} options={{ title: 'KucukbirDeneme' 
-         }} />
+         <Drawer.Screen name="Vericekmeornekleri" component={Vericekmeornekleri} options={{ title: 'Veri cekme ornekleri' 
+         }} /> 
       </Drawer.Navigator>
     </NavigationContainer>
   );

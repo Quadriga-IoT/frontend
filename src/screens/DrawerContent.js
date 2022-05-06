@@ -113,8 +113,8 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Episodes"
-                            onPress={() => {props.navigation.navigate('Episodes')}}
+                            label="Grafik"
+                            onPress={() => {props.navigation.navigate('Grafik')}}
                         />
                         <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
@@ -135,8 +135,8 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="KucukbirDeneme"
-                            onPress={() => {props.navigation.navigate('KucukbirDeneme')}}
+                            label="Vericekmeornekleri"
+                            onPress={() => {props.navigation.navigate('Vericekmeornekleri')}}
                         />
                     </Drawer.Section>
 
