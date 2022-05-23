@@ -51,5 +51,17 @@
   },
   "jest": {
     "preset": "react-native"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Quadriga-IoT/frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Quadriga-IoT/frontend/issues"
+  },
+  "homepage": "https://github.com/Quadriga-IoT/frontend#readme",
+  "description": ""
 }
