@@ -17,7 +17,7 @@ function Grafik()
     //     return pil.id;      
     // })
 
-    var yenipil = [10,20,22,30,40,50,60,65,75,90]
+    var yenipil = [10,20,22,30,40,50,60,65,75,90,97]
   
   useEffect(() => 
   {
@@ -26,11 +26,15 @@ function Grafik()
     .catch(error => console.log({error}));
   }, []); 
 
-  var count = 0;
-  var yenizaman = zaman.map(function(zaman){
-    count++;
-    return zaman.id;
-  })
+  // var count = 0;
+  // var yenizaman = zaman.map(function(zaman){
+  //   count++;
+  //   return zaman.id;
+  // })
+
+  var count = 11;
+
+  var yenizaman = [0,1,2,3,4,5,6,7,8,9,10]
 
   const xdata = yenizaman;
   const ydata = yenipil;

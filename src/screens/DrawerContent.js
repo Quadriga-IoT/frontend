@@ -105,7 +105,7 @@ export function DrawerContent(props) {
                             label="Hakkımızda"
                             onPress={() => {props.navigation.navigate('Hakkimizda')}}
                         />
-                        <DrawerItem style = { styles.draweritem}
+                        {/* <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="information-outline" 
@@ -115,8 +115,8 @@ export function DrawerContent(props) {
                             )}
                             label="Grafik"
                             onPress={() => {props.navigation.navigate('Grafik')}}
-                        />
-                        <DrawerItem style = { styles.draweritem}
+                        /> */}
+                        {/* <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="information-outline" 
@@ -126,8 +126,8 @@ export function DrawerContent(props) {
                             )}
                             label="Udemy"
                             onPress={() => {props.navigation.navigate('Udemy')}}
-                        />
-                        <DrawerItem style = { styles.draweritem}
+                        /> */}
+                        {/* <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="information-outline" 
@@ -137,7 +137,7 @@ export function DrawerContent(props) {
                             )}
                             label="Vericekmeornekleri"
                             onPress={() => {props.navigation.navigate('Vericekmeornekleri')}}
-                        />
+                        /> */}
                     </Drawer.Section>
 
         </View>

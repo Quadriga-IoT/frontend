@@ -97,12 +97,12 @@ function App() {
          }} />
          <Drawer.Screen name="YapilanGorev" component={YapilanGorev} options={{ title: 'YapilanGorev' 
          }} />
-         <Drawer.Screen name="Grafik" component={Grafik} options={{ title: 'Grafik' 
-         }} />
-         <Drawer.Screen name="Udemy" component={Udemy} options={{ title: 'Udemy' 
+         {/* <Drawer.Screen name="Grafik" component={Grafik} options={{ title: 'Grafik' 
+         }} /> */}
+         {/* <Drawer.Screen name="Udemy" component={Udemy} options={{ title: 'Udemy' 
          }} />
          <Drawer.Screen name="Vericekmeornekleri" component={Vericekmeornekleri} options={{ title: 'Veri cekme ornekleri' 
-         }} /> 
+         }} />  */}
       </Drawer.Navigator>
     </NavigationContainer>
   );
