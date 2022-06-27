@@ -9,6 +9,7 @@ import Hiz from './screens/Hiz'
 import Konum from './screens/Konum'
 import Hakkimizda from './screens/Hakkimizda'
 import YapilanGorev from './screens/YapilanGorev'
+import Deneme from './screens/Deneme'
 import Grafik from './screens/Grafik'
 import Udemy from './screens/Udemy'
 import Vericekmeornekleri from './screens/Vericekmeornekleri'
@@ -96,6 +97,8 @@ function App() {
         //   />)
          }} />
          <Drawer.Screen name="YapilanGorev" component={YapilanGorev} options={{ title: 'YapilanGorev' 
+         }} />
+         <Drawer.Screen name="Deneme" component={Deneme} options={{ title: 'Deneme' 
          }} />
          {/* <Drawer.Screen name="Grafik" component={Grafik} options={{ title: 'Grafik' 
          }} /> */}

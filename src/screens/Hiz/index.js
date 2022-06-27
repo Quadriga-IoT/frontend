@@ -8,7 +8,7 @@ function Hiz()
   const [zaman, setzaman] = useState([]);
   useEffect(() => 
   {
-    axios.get("https://jsonplaceholder.typicode.com/users")
+    axios.get("http://164.92.130.208")
     .then(response => sethiz(response.data))
     .catch(error => console.log({error}));
   }, []);
@@ -16,15 +16,22 @@ function Hiz()
     // var yenipil = pil.map(function(pil){
     //     return pil.id;      
     // })
-
-    var yenihiz = [0,30,45,60,75,56,]
+    var yenihiz = new Array();
+    // var sayi1 = 0;
+   for (i = 0; i<9 ; i++)
+    {   
+    //  yenihiz[i] =sayi1;
+    //  sayi1++;
+     yenihiz[i] = hiz.data[i].speed;
+    }
+    // var yenihiz = [0,30,45,60,75,56,]
   
-  useEffect(() => 
-  {
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then(response => setzaman(response.data))
-    .catch(error => console.log({error}));
-  }, []); 
+  // useEffect(() => 
+  // {
+  //   axios.get("http://164.92.130.208")
+  //   .then(response => setzaman(response.data))
+  //   .catch(error => console.log({error}));
+  // }, []); 
 
   // var count = 0;
   // var yenizaman = zaman.map(function(zaman){
@@ -32,9 +39,17 @@ function Hiz()
   //   return zaman.id;
   // })
 
-  var count = 6;
-
-  var yenizaman = [0,2,4,6,8,10]
+  var count = 9;
+  var yenizaman= new Array();
+  var b = 0;
+  // var sayi = 240;
+  for (i = 0; i<9 ; i++)
+     {   
+      b = hiz.data[i].workingTime;
+       yenizaman[i] = b/60;
+      //  sayi= sayi+10;
+     }
+  // var yenizaman = [0,2,4,6,8,10]
 
   const xdata = yenizaman;  
   const ydata = yenihiz;
@@ -98,7 +113,7 @@ function Hiz()
     style={{ height: 300, width: 380 ,marginTop: 50}}
     data = {sondizi}
     padding={{ left: 60, bottom: 20, right: 20, top: 20 }}
-    xDomain={{ min: 0, max: 10 }}
+    xDomain={{ min: 0, max: 22 }}
     yDomain={{ min: 0, max: 100 }}
     // viewport={{ size: { width: 2 } }}
     >

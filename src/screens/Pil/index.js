@@ -11,41 +11,63 @@ function Pil()
   const [zaman, setzaman] = useState([]);
   useEffect(() => 
   {
-    axios.get("https://jsonplaceholder.typicode.com/users")
+    axios.get("http://164.92.130.208")
     .then(response => setpil(response.data))
     .catch(error => console.log({error}));
   }, []);
-     
-    // var yenipil = pil.map(function(pil){
-    //     return pil.id;      
-    // })
 
-    var yenipil = [10,20,30,50,70,80]
+  var yenipil = new Array();
+   var sayi1 = 0;
+  for (i = 0; i<9 ; i++)
+   {   
+    // yenipil[i] =sayi1;
+    // sayi1++;
+    yenipil[i] = pil.data[i].battery0;
+   }
+
+  //   // var yenipil = pil.map(function(pil){
+  //   //     return pil.id;      
+  //   // })
+
+  //   for (i = 0; i<9 ; i++)
+  //   {   
+  //     var yenipil = pil.data[i].battery0;
+  //   }
+  //   // var yenipil = [10,20,30,50,70,80]
   
-  useEffect(() => 
-  {
-    axios.get("https://jsonplaceholder.typicode.com/users")
-    .then(response => setzaman(response.data))
-    .catch(error => console.log({error}));
-  }, []); 
+  // useEffect(() => 
+  // {
+  //   axios.get("http://164.92.130.208")
+  //   .then(response => setzaman(response.data))
+  //   .catch(error => console.log({error}));
+  // }, []); 
 
-  // var count = 0;
-  // var yenizaman = zaman.map(function(zaman){
-  //   count++;
-  //   return zaman.id;
-  // })
+  // // var count = 0;
+  // // var yenizaman = zaman.map(function(zaman){
+  // //   count++;
+  // //   return zaman.id;
+  // // })
 
-  var count = 6;
-
-  var yenizaman = [0,2,4,6,8,10];
+   var count = 9;
+   var yenizaman = new Array();
+  var sayi = 240;
+  var b = 0;
+   for (i = 0; i<9 ; i++)
+      {   
+        b = pil.data[i].workingTime;
+        yenizaman[i] = b/60;
+        // sayi= sayi+10;
+        // yenizaman[i] = sayi/60;
+      }
+  // var yenizaman = [0,2,4,6,8,10];
 
   const xdata = yenizaman;
   const ydata = yenipil;
-  var i = 0;
+  var a = 0;
   var sondizi =[];
-  for (i = 0; i<count ; i++)
+  for (a = 0; a<count ; a++)
   {   
-    sondizi[i] = {x: xdata[i] , y: ydata[i]}
+    sondizi[a] = {x: xdata[a] , y: ydata[a]}
   }
 
 
@@ -103,7 +125,7 @@ function Pil()
     style={{ height: 300, width: 380, marginTop: 50}}
     data = {sondizi}
     padding={{ left: 40, bottom: 20, right: 20, top: 20 }}
-    xDomain={{ min: 0, max: 10 }}
+    xDomain={{ min: 0, max: 22 }}
     yDomain={{ min: 0, max: 100 }}
     // viewport={{ size: { width: 2 } }}
     >

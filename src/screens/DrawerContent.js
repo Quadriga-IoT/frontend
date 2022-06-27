@@ -105,6 +105,17 @@ export function DrawerContent(props) {
                             label="Hakkımızda"
                             onPress={() => {props.navigation.navigate('Hakkimizda')}}
                         />
+                        <DrawerItem style = { styles.draweritem}
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="information-outline" 
+                                color= {"#000000"}
+                                size={size}
+                                />
+                            )}
+                            label="Deneme"
+                            onPress={() => {props.navigation.navigate('Deneme')}}
+                        />
                         {/* <DrawerItem style = { styles.draweritem}
                             icon={({color, size}) => (
                                 <Icon 
